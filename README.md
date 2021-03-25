@@ -17,7 +17,11 @@ Por Favor:
 EDITAR el archivo .gitignore para evitar subir archivos innecesarios segun los lenguajes que utilicen y añadir al readme un registro de la configuracion del ignore.
 
 &nbsp;
-Por Favor pongan su codigo dentro de sus carpetas.
+Por Favor pongan su codigo dentro de sus carpetas Y utilicen sus correspondientes ramas.
+
+&nbsp;
+Cuando quieran subir su codigo a la rama main hagan un pull request y yo lo reviso antes.
+
 
 &nbsp;
 Se pide encarecidamente que no realicen commit o push sin estar seguros de lo que estan subiendo tratemos de no reventar el repositorio.
