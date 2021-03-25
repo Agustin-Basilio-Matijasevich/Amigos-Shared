@@ -5,7 +5,9 @@ Sirve como medio para pasarnos codigo entre amigos y experimentar con github
 Agustín Basilio Matijasevich
 
 # Collaborators
-Luciano Gatti\n
+Luciano Gatti
+
+&nbsp;
 Galo Guini
 
 # Note
