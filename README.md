@@ -26,8 +26,6 @@ Archivo creado bajo la plantilla de exlcucion para archivos basura de C++
 &nbsp;
 25/03/2021: Se añadio exclucion para carpeta fuente de Visual Studio.
 
-			&nbsp;
 			Se añadio exclucion para archivos de Visual Studio.
 
-			&nbsp;
 			Se añadio exclucion para archivos basura de C.
