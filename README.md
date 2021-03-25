@@ -30,6 +30,6 @@ Archivo creado bajo la plantilla de exlcucion para archivos basura de C++
 			
 			Se añadio exclucion para carpeta fuente de Visual Studio.
 
-			Se añadio exclucion para archivos de Visual Studio.
+			Se añadio exclucion para archivos Basura de Visual Studio.
 
 			Se añadio exclucion para archivos basura de C.
