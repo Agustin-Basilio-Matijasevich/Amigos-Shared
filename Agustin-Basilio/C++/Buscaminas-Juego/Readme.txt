@@ -1,0 +1,1 @@
+Buscaminas-Juego es una solucion de Visual Studio 2019
