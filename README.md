@@ -24,7 +24,8 @@ Se pide encarecidamente que no realicen commit o push sin estar seguros de lo qu
 Archivo creado bajo la plantilla de exlcucion para archivos basura de C++
 
 &nbsp;
-25/03/2021: Se añadio exclucion para carpeta fuente de Visual Studio.
+25/03/2021: 
+			Se añadio exclucion para carpeta fuente de Visual Studio.
 
 			Se añadio exclucion para archivos de Visual Studio.
 
