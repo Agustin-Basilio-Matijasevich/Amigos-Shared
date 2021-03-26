@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="es-ar">
+<head>
+    <meta charset="utf-8" />
+    <title>Contenido Interactivo y embebido en HTML</title>
+
+    <link href="styles.css" rel="stylesheet">
+    <link href="favicon.png" rel="shortcut icon" />
+</head>
+<body>
+
+    <header>
+        <a href="/">
+            <img src="img/logo.png" class="mediana">
+        </a>
+    </header>
+
+    <dialog open id="baner" class="baner">
+        <content>
+            <button id="cerrar" class="cerrar"><img src="/cruz.svg" alt="Cerrar" class="cerrar" /></button>
+            <h2>Dodge Challenger Hellcat</h2>
+            <figure><img src="https://images.pexels.com/photos/3608542/pexels-photo-3608542.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Imagen de Dodge Challenger Hellcat" class="ban" /></figure>
+            <p>Precio: 30000Usd</p>
+            <p>Marca: Dodge</p>
+        </content>
+    </dialog>
+
+    <h1>Contenido Interactivo en HTML</h1>
+
+    <details>
+        <summary>Lista en acordeon</summary>
+
+        <p>Primer elemento</p>
+        <p>Segundo</p>
+        <p>Esto esta hecho sin javascript</p>
+        <p>Solo con la etiqueta details</p>
+    </details>
+
+    <script>
+        const cerrar = document.getElementById("cerrar");
+        const baner = document.getElementById("baner");
+
+        function cerrarbaner() {
+            baner.removeAttribute('open');
+        }
+
+        function ca1() {
+            baner.style.background = 'green';
+            baner.style.color = 'red';
+            setTimeout(ca3, 2000);
+        }
+
+        function ca2() {
+            baner.style.background = 'red';
+            baner.style.color = 'green';
+            setTimeout(ca1, 2000);
+        }
+
+        function ca3() {
+            baner.style.background = 'yellow';
+            baner.style.color = 'black';
+            setTimeout(ca2, 2000);
+        }
+
+        setTimeout(ca3, 1500);
+
+        cerrar.addEventListener('click', cerrarbaner, true);
+
+
+    </script>
+
+    <h1>Contenido embebido en HTML</h1>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/M_VZOFzCaXw?start=81" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56644.45948574365!2d-59.030364643443924!3d-27.46058095991433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94450c62a6f5f70b%3A0xf03ac86511c2cd6d!2sResistencia%2C%20Chaco!5e0!3m2!1ses-419!2sar!4v1602631270259!5m2!1ses-419!2sar" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+</body>
+</html>

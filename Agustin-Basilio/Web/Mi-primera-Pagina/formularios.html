@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+
+<html lang="es-ar">
+<head>
+    <meta charset="utf-8" />
+    <title>Formularios</title>
+    <link href="styles.css" rel="stylesheet">
+    <link href="favicon.png" rel="shortcut icon" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img src="img/logo.png" class="mediana">
+        </a>
+    </header>
+
+    <h1>Formularios</h1>
+
+    <form>
+
+        <fieldset>
+
+            <legend>
+                Primeros datos
+            </legend>
+
+            <div>
+                <label for="username">Ingrese su Nombre de usuario</label>  <!--con for e id-->
+                <input name="username" id="username" type="text" required />
+            </div>
+
+            <div>
+                <input type="email" name="email" placeholder="Ingrese su correo" required />  <!--Sin label-->
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                Segundo Fieldset
+            </legend>
+
+            <div>
+                <label>
+                    Ingrese su fecha de nacimiento
+                    <input type="date" name="bornage" required />
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    Ingrese su telefono
+                    <input type="tel" name="phone" />
+                </label>
+            </div>
+
+        </fieldset>
+
+        <div>
+            <label> <!-- poniendo todo adentro del label-->
+                Ingrese su contraseña
+                <input id="password" type="password" name="password" required />
+            </label>
+        </div>
+        
+        <div>
+            <label>
+                Ingrese su edad
+                <input name="age" type="number" required />
+            </label>
+        </div>
+
+        <div>
+            <label>Atributo readonly</label>
+            <input type="number" name="readonly" value="2" readonly />
+        </div>
+
+        <fieldset>
+             <legend>
+                    Inputs de no escritura mas usuales
+             </legend>
+
+                <div>
+                    <label>
+                        Marcar un checkbox <!--Opciones multiples-->
+                        <input type="checkbox" name="checkbox" value="" />
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        ¿Te gusta dormir?
+                        <input type="checkbox" name="sleep" value="" />
+                    </label>
+                </div>
+
+                <fieldset>
+                    
+                    <legend>
+                        Genero (Tipo Radio) <!--Una sola opcion-->
+                    </legend>
+
+                    <div>
+                        <label>
+                            <input type="radio" name="gender" value="" />
+                            Hombre
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="" />
+                            Mujer
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="" />
+                            Prefiero no decirlo
+                        </label>
+                    </div>
+                </fieldset>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                Gustos Personales (Checkbox En una misma linea)
+            </legend>
+
+            <div>
+                <label>
+                    <input type="checkbox" name="flight" value="" />
+                    Volar
+                </label>
+
+                <label>
+                    <input type="checkbox" name="eat" value="" />
+                    Comer
+                </label>
+
+                <label>
+                    <input type="checkbox" name="run" value="" />
+                    Correr
+                </label>
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                Elemento select
+            </legend>
+
+            <div>
+                <label>
+                    Elige tu pais
+                    <select name="country">
+
+                        <optgroup label="America">
+                            <option value="ar">Argentina</option>
+                            <option value="br">Brasil</option>
+                            <option value="bo">Bolivia</option>
+                        </optgroup>
+
+                        <optgroup label="Europa">
+                            <option value="es">España</option>
+                            <option value="po">Portugal</option>
+                            <option value="it">Italia</option>
+                        </optgroup>
+                        
+                    </select>
+                </label>
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                ¿Algo extra que comentar?
+            </legend>
+
+            <textarea name="coment" cols="30" rows="10" placeholder="Escribe aqui tu comentario"></textarea>
+
+        </fieldset>
+        
+        <div>
+            <!--<button>Enviar</button>-->
+            <input type="submit"  value="Log in"/>
+        </div>
+        
+    </form>
+
+    <!--Imprime en consola lo escrito en el renglon username-->
+    <script>
+        document.getElementById('username')
+        .addEventListener('keyup', e => { console.log(e.target.value) })
+    </script>
+
+    <!--Es recomendable usar spaceholder para formularios de carga de texto y label para el resto pero queda a eleccion segun diseño de pagina-->
+
+</body>
+</html>

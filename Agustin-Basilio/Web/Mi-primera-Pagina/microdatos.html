@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="es-ar" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="utf-8" />
+    <title>Microdatos y Opengraph</title>
+    <meta property="og:title" content="Microdatos y Opengraph"/>
+    <meta property="og:type" content="Pagina de estudio"/>
+    <meta property="og:url" content="nohayurl"/>
+    <meta property="og:image" content="https://ogp.me/logo.png"/>
+    <link href="styles.css" rel="stylesheet">
+    <link href="favicon.png" rel="shortcut icon">
+</head>
+<body>
+    <header>
+        <a href="/" id="top">
+            <img src="img/logo.png" class="mediana">
+        </a>
+    </header>
+
+    <article itemscope itemtype="http://schema.org/Book">
+        <h2 itemprop="name">Phyton</h2>
+        <img itemprop="image" src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Foto de libro sobre phyton" />
+        <p>Autor: <span itemprop="author">Orreilli</span></p>
+        <p>Lenguaje: <span itemprop="inLanguage">Español</span></p>
+        <div itemscope itemtype="http://schema.org/Offer">
+            <p>Precio: <span itemprop="price">500</span></p>
+        </div>
+    </article>
+
+</body>
+</html>

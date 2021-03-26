@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html lang="es-ar">
+<head>
+    <meta charset="utf-8" />
+    <title>Tablas</title>
+    <link href="styles.css" rel="stylesheet">
+    <link href="favicon.png" rel="shortcut icon" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img src="img/logo.png" class="mediana">
+        </a>
+    </header>
+
+    <table>
+
+        <caption>Mi horario de Clases</caption>
+        <colgroup>
+            <col span="4"/>
+            <col style="background : red"/>
+        </colgroup>
+        
+        <thead>
+            <tr>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td rowspan="2">HTML</td>
+                <td>JavaScript</td>
+                <td rowspan="2">PHP</td>
+                <td>Python</td>
+                <td rowspan="2">C++</td>
+            </tr>
+
+            <tr>
+                <td>GO</td>
+                <td>Big Data</td>
+            </tr>
+
+            <tr>
+                <td colspan="5">Recreo</td>
+            </tr>
+
+            <tr>
+                <td>Java</td>
+                <td>PWA</td>
+                <td>Arduino</td>
+                <td>Linux</td>
+                <td>C##</td>
+            </tr>
+
+        </tbody>
+
+        <tfoot style="background: red">
+            <tr>
+                <td>Dia de mierda</td>
+                <td>Va queriendo</td>
+                <td>Re piola</td>
+                <td>Cansa</td>
+                <td>Estoy podrido</td>
+            </tr>
+        </tfoot>
+        
+    </table>
+
+</body>
+</html>
