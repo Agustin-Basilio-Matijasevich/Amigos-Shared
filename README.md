@@ -20,6 +20,9 @@ EDITAR el archivo .gitignore para evitar subir archivos innecesarios segun los l
 Por Favor pongan su codigo dentro de sus carpetas Y utilicen sus correspondientes ramas.
 
 &nbsp;
+Recuerden hacer un fetch para actualizar sus ramas antes de arrancar por si hubieron cambios en el main.
+
+&nbsp;
 Cuando quieran subir su codigo a la rama main hagan un pull request y yo lo reviso antes.
 
 
