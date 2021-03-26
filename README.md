@@ -2,7 +2,7 @@
 Sirve como medio para pasarnos codigo entre amigos y experimentar con github
 
 # Owner
-Agustín Basilio Matijasevich
+AgustÃ­n Basilio Matijasevich
 
 # Collaborators
 Luciano Gatti
@@ -14,17 +14,22 @@ Galo Guini
 Por Favor:
 
 &nbsp;
-EDITAR el archivo .gitignore para evitar subir archivos innecesarios segun los lenguajes que utilicen y añadir al readme un registro de la configuracion del ignore.
+EDITAR el archivo .gitignore para evitar subir archivos innecesarios segun los lenguajes que utilicen y aÃ±adir al readme un registro de la configuracion del ignore.
 
 &nbsp;
 Por Favor pongan su codigo dentro de sus carpetas Y utilicen sus correspondientes ramas.
 
 &nbsp;
-Cuando quieran subir su codigo a la rama main hagan un pull request y yo lo reviso antes.
-
+Recuerden hacer un pull a la rama main y un merge a su rama desde la main para actualizar su rama antes de arrancar por si hubieron cambios en el main.
 
 &nbsp;
-Se pide encarecidamente que no realicen commit o push sin estar seguros de lo que estan subiendo tratemos de no reventar el repositorio.
+Si quieren crear una rama extra temporal haganlo pero al terminar de usarla hagan merge a su rama y borrenla del server.
+
+&nbsp;
+NO se metan en la rama de otros ni hagan pull request para modificar la rama de otro las pull request son para el main unicamente.
+
+&nbsp;
+Cuando quieran subir su codigo a la rama main hagan un pull request y yo lo reviso antes.
 
 # .gitignore changelog
 Archivo creado bajo la plantilla de exlcucion para archivos basura de C++
@@ -32,8 +37,8 @@ Archivo creado bajo la plantilla de exlcucion para archivos basura de C++
 &nbsp;
 25/03/2021: Modificaciones
 			
-			Se añadio exclucion para carpeta fuente de Visual Studio.
+			Se aÃ±adio exclucion para carpeta fuente de Visual Studio.
 
-			Se añadio exclucion para archivos Basura de Visual Studio.
+			Se aÃ±adio exclucion para archivos Basura de Visual Studio.
 
-			Se añadio exclucion para archivos basura de C.
+			Se aÃ±adio exclucion para archivos basura de C.
