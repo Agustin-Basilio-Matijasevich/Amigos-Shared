@@ -33,7 +33,7 @@ Cuando quieran subir su codigo a la rama main hagan un pull request y yo lo revi
 
 # .gitignore changelog
 Archivo creado bajo la plantilla de exlcucion para archivos basura de C++
-mnsdvsdbvjkskvjsvsdkvksvjksbkvjbskvkbjskjvbsdkjvbksdvkjbsv
+
 &nbsp;
 25/03/2021: Modificaciones
 			
