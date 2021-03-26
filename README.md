@@ -26,6 +26,9 @@ Recuerden hacer un merge a su rama desde la main para actualizar su rama antes d
 Si quieren crear una rama extra temporal haganlo pero al terminar de usarla hagan merge a su rama y borrenla del server.
 
 &nbsp;
+NO se metan en la rama de otros ni hagan pull request para modificar la rama de otro las pull request son para el main unicamente.
+
+&nbsp;
 Cuando quieran subir su codigo a la rama main hagan un pull request y yo lo reviso antes.
 
 # .gitignore changelog
