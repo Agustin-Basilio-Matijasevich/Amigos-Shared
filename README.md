@@ -20,7 +20,7 @@ EDITAR el archivo .gitignore para evitar subir archivos innecesarios segun los l
 Por Favor pongan su codigo dentro de sus carpetas Y utilicen sus correspondientes ramas.
 
 &nbsp;
-Recuerden hacer un merge a su rama desde la main para actualizar su rama antes de arrancar por si hubieron cambios en el main.
+Recuerden hacer un pull a la rama main y un merge a su rama desde la main para actualizar su rama antes de arrancar por si hubieron cambios en el main.
 
 &nbsp;
 Si quieren crear una rama extra temporal haganlo pero al terminar de usarla hagan merge a su rama y borrenla del server.
