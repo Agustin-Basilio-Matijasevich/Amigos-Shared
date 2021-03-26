@@ -37,6 +37,24 @@ int main()
 
 	//Estas son las reglas de formateo para cualquier tipo de dato nada mas que no tiene sentido agregarle digitos decimales a un entero
 
+	//Ahora si hagamos una division que el usuario ingrese
+
+	printf("Hagamos una division con valores que vos insertes\n\n");
+
+	float dividendo, divisor, division;
+
+	printf("Ingrese el dividendo: ");
+
+	scanf_s("%f", &dividendo);
+
+	printf("\nIngrese el divisor: ");
+
+	scanf_s("%f", &divisor);
+
+	division = dividendo / divisor;
+
+	printf("\nEl resultado con 4 decimales de precicion es: %.4f\n\n", division);
+
 	system("Pause");
 	return 0;
 }
