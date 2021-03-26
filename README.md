@@ -28,10 +28,6 @@ Si quieren crear una rama extra temporal haganlo pero al terminar de usarla haga
 &nbsp;
 Cuando quieran subir su codigo a la rama main hagan un pull request y yo lo reviso antes.
 
-
-&nbsp;
-Se pide encarecidamente que no realicen commit o push sin estar seguros de lo que estan subiendo tratemos de no reventar el repositorio.
-
 # .gitignore changelog
 Archivo creado bajo la plantilla de exlcucion para archivos basura de C++
 
