@@ -14,7 +14,7 @@ Galo Guini
 Por Favor:
 
 &nbsp;
-EDITAR el archivo .gitignore para evitar subir archivos innecesarios segun los lenguajes que utilicen y añadir al readme un registro de la configuracion del ignore.
+EDITAR el archivo .gitignore para evitar subir archivos innecesarios segun los lenguajes que utilicen y añadir al readme un registro de la configuracion del ignore, si van a cambiar el gitignore o el readme antes actualicen el que esta en su rama haciendo merge de la main a su rama asi se aseguran que estan modificando sobre el archivo actualizado.
 
 &nbsp;
 Si realizan modificaciones en la carpeta de otro por acuerdo entre pares o modifican el gitignore o el readme hagan el commit en su arbol y un pull request inmediatamente
