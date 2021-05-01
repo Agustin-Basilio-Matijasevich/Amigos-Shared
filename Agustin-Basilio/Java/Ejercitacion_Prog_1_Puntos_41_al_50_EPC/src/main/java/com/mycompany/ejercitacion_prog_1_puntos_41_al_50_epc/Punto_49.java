@@ -4,11 +4,6 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-/**
- *
- * @author agust
- */
-
 class Estudiante  //Bajo objetos basados en esta clase vamos a almacenar a los estudiantes
 {
     //Si o si el objeto tiene dni nombre y apellido y no se puede cambiar
@@ -28,83 +23,71 @@ class Estudiante  //Bajo objetos basados en esta clase vamos a almacenar a los e
         parcial_1 = -1;
         recu_1 = -1;
         parcial_2 = -1;
-        recu_2 = -1;
-        
+        recu_2 = -1;   
     }
     
-    public double getdni()  //Devuelve el dni
+    public int getdni()  //Devuelve el dni
     {
         return DNI;
-        
     }
     
     public String getnombre ()  //Devuelve el nombre
     {
-        return nombre;
-        
+        return nombre;        
     }
     
     public String getapellido ()  //Devuelve el apellido
     {
-        return apellido;
-        
+        return apellido;       
     }
     
     public int getparcial1 ()  //Devuelve parcial 1
     {
-        return parcial_1;
-        
+        return parcial_1;      
     }
     
     public int getrecuperatorio1 ()  //Devuelve recu 1
     {
-        return recu_1;
-        
+        return recu_1;       
     }
     
     public int getparcial2 ()  //Devuelve parcial 2
     {
-        return parcial_2;
-        
+        return parcial_2;        
     }
     
     public int getrecuperatorio2 ()  //Devuelve recu 2
     {
-        return recu_2;
-        
+        return recu_2;       
     }
     
     public void setparcial1 (int nuevanota)  //Recibe un valor y lo carga en parcial 1
     {
-        parcial_1 = nuevanota;
-        
+        parcial_1 = nuevanota;       
     }
     
     public void setrecuperatorio1 (int nuevanota)  //Recibe un valor y lo carga en recu 1
     {
-        recu_1 = nuevanota;
-        
+        recu_1 = nuevanota;        
     }
     
     public void setparcial2 (int nuevanota)  //Recibe un valor y lo carga en parcial 2
     {
-        parcial_2 = nuevanota;
-        
+        parcial_2 = nuevanota;       
     }
     
     public void setrecuperatorio2 (int nuevanota)  //Recibe un valor y lo carga en recu 2
     {
-        recu_2 = nuevanota;
-        
+        recu_2 = nuevanota;       
     }
     
 }
 
 public class Punto_49
 {
-    private static int buscar_persona (ArrayList <Estudiante> estudiantes, double DNI)  //Recibe la lista de estudiantes y un dni para buscar, devuelve el ID de lista del estudiante
+    private static int buscar_persona (ArrayList <Estudiante> estudiantes, int DNI)  //Recibe la lista de estudiantes y un dni para buscar, devuelve el ID de lista del estudiante
     {
-        int ID = 0;
+        int ID = 1;
         
         
         
@@ -143,12 +126,22 @@ public class Punto_49
         
     }
     
-    private static void cargar_estudiante ()
+    private static void cargar_estudiante (ArrayList <Estudiante> estudiantes)
     {
         // Metodo de entrada
         Scanner entrada = new Scanner (System.in);
         
+        String nombre, apellido;
+        int DNI;
+       
+        System.out.println("Ingrese el Nombre del alumno: ");
+        nombre = entrada.nextLine();
+        System.out.println("Ingrese el Apellido del alumno: ");
+        apellido = entrada.nextLine();
+        System.out.println("Ingrese el Apellido del alumno: ");
+        DNI = entrada.nextInt();
         
+        estudiantes.add(new Estudiante(DNI, nombre, apellido));
     }
     
     public static void main(String[] args)
@@ -185,7 +178,7 @@ public class Punto_49
             {
                 case 1:
                 {
-                    cargar_estudiante();
+                    cargar_estudiante(estudiantes);
                     break;
                     
                 }
@@ -197,7 +190,6 @@ public class Punto_49
                 }
                 case 3:
                 {
-                    estudiantes.add(new Estudiante(43146475, "Agustin", "Basilio"));
                     mostrar_estudiantes (estudiantes);
                     break;
                     
