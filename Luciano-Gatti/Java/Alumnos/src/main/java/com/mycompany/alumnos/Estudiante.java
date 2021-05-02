@@ -9,16 +9,18 @@ public class Estudiante {
     private int recu_2;
     static private String nombre;
     static private String apellido;
+    static private String estado;
     
-    public Estudiante(int nuevodni, String nuevonombre, String nuevoapellido)  //Constructor
+    public Estudiante(int nuevodni, String nuevonombre, String nuevoapellido, int novoparcial1, int novoparcial2, int novorecu1, int novorecu2, String nuevoestado)  //Constructor
     {
         DNI = nuevodni;
         nombre = nuevonombre;
         apellido = nuevoapellido;
-        parcial_1= 0;
-        recu_1 = 0;
-        parcial_2 = 0;
-        recu_2 = 0;   
+        parcial_1= novoparcial1;
+        recu_1 = novorecu1;
+        parcial_2 = novoparcial2;
+        recu_2 = novorecu2;   
+        estado = nuevoestado;
     }
     
     public int getdni()  //Devuelve el dni
@@ -34,6 +36,16 @@ public class Estudiante {
     public String getapellido ()  //Devuelve el apellido
     {
         return apellido;       
+    }
+    
+    public String getestado ()
+    {
+        return estado;
+    }
+    
+    public void setestado (String nuevoestado)
+    { 
+        estado = nuevoestado;
     }
     
     public int getparcial1 ()  //Devuelve parcial 1

@@ -37,33 +37,28 @@ public class Main {
             
             switch (opcionMP)
             {
-                case 1:/*Cargar datos de estudiantes*/
+                case 1 -> /*Cargar datos de estudiantes*/
                 {
-                    cargar_estudiante(estudiantes);
-                    break;
-                    
+                    cargar_estudiante(estudiantes);         
                 }
-                case 2:/*Cargar notas*/
+                
+                case 2 -> /*Cargar notas*/
                 {
-                    asignar_notas (estudiantes);
-                    break;
-                    
+                    asignar_notas (estudiantes);            
                 }
-                case 3:/*Mostrar lista de estudiantes, con notas y estado de la materia*/
+                
+                case 3 -> /*Mostrar lista de estudiantes, con notas y estado de la materia*/
                 {
-                    mostrar_estudiantes(estudiantes);
-                    break;
-                    
+                    mostrar_estudiantes(estudiantes);      
                 }
-                case 4:/*Salir*/
+                
+                case 4 -> /*Salir*/
                 {
-                    break;
-                    
                 }
-                default:/*Datos invalidos*/
+                
+                default -> /*Datos invalidos*/
                 {
                     System.out.println("Opcion invalida, por favor reintente.");
-                    break;
                     
                 }
                 
@@ -77,8 +72,8 @@ public class Main {
     {
         Scanner entrada = new Scanner (System.in);
         /*Variables locales*/
-        String nombre, apellido;
-        int DNI;
+        String nombre, apellido, estado = "null";
+        int DNI, parcial_1 = 0, parcial_2 = 0, recu_1 = 0, recu_2 = 0;
         
        
         /*Ingreso de variables*/
@@ -91,28 +86,23 @@ public class Main {
         
        
         /*Cargar datos en la lista*/
-        estudiantes.add(new Estudiante(DNI, nombre, apellido));
+        estudiantes.add(new Estudiante(DNI, nombre, apellido, parcial_1, parcial_2, recu_1, recu_2, estado));
     }
     
     private static int buscar_persona (ArrayList <Estudiante> estudiantes, int DNI)  //Recibe la lista de estudiantes y un dni para buscar, devuelve el ID de lista del estudiante
     {
-        int ID=0;
-        int comparar;
-    
+        int ID = -1;
+        
         for (int i = 0; i < estudiantes.size(); i++) {
-            comparar = estudiantes.get(i).getdni();
-         
-            if (comparar == DNI)         
-            {           
-                break;         
-            }
-            else          
-            {         
-                ID++;       
-            }
-        } 
-       
-        return ID;
+            Estudiante p = estudiantes.get(i);
+            if (p.getdni()== DNI) 
+            {
+                ID = i;
+                break; 	
+            }	
+        }	
+        
+        return ID; 
     }
     
     private static void asignar_notas (ArrayList <Estudiante> estudiantes)
@@ -121,10 +111,17 @@ public class Main {
         Scanner entrada = new Scanner (System.in);  
         int DNI, parcial_1, parcial_2, recu_1, recu_2, ID;
       
-        
+        do
+        {
         System.out.println("Ingrese el DNI del alumno: ");
         DNI = entrada.nextInt();
         ID = buscar_persona(estudiantes,DNI);
+        if (ID == -1)
+        {
+            System.out.println("El DNI ingresado es incorrecto, intentelo nuevamente.");
+        }
+        }
+        while (ID != -1);
         
         System.out.println("Ingrese la nota del primer parcial: ");
         parcial_1 = entrada.nextInt();
@@ -139,12 +136,18 @@ public class Main {
             System.out.println("Ingrese la nota del recuperatorio del primer parcial: ");
             recu_1 = entrada.nextInt();
             estudiantes.get(ID).setrecuperatorio1(recu_1);
+        }else
+        {
+            estudiantes.get(ID).setrecuperatorio1(0);
         }
         if (parcial_2 < 6)
         {
             System.out.println("Ingrese la nota del recuperatorio del seguno parcial: ");
             recu_2 = entrada.nextInt();
             estudiantes.get(ID).setrecuperatorio2(recu_2);
+        }else
+        {
+            estudiantes.get(ID).setrecuperatorio2(0);
         }
     }
     
