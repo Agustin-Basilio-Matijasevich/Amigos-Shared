@@ -42,10 +42,12 @@ public class Main {
                     cargar_estudiante(estudiantes);         
                 }
                 
-                case 2 -> /*Cargar notas*/
+                case 2 -> /*Cargar notas y asignar estado de la materia*/
                 {
-                    asignar_notas (estudiantes);            
+                    asignar_notas (estudiantes);  
+                    estado (estudiantes);
                 }
+
                 
                 case 3 -> /*Mostrar lista de estudiantes, con notas y estado de la materia*/
                 {
@@ -72,8 +74,8 @@ public class Main {
     {
         Scanner entrada = new Scanner (System.in);
         /*Variables locales*/
-        String nombre, apellido, estado = "null";
-        int DNI, parcial_1 = 0, parcial_2 = 0, recu_1 = 0, recu_2 = 0;
+        String nombre, apellido, estado="null";
+        int DNI, parcial_1=0, parcial_2=0, recu_1=0, recu_2=0;
         
        
         /*Ingreso de variables*/
@@ -84,7 +86,6 @@ public class Main {
         System.out.println("Ingrese el DNI del alumno: ");
         DNI = entrada.nextInt();
         
-       
         /*Cargar datos en la lista*/
         estudiantes.add(new Estudiante(DNI, nombre, apellido, parcial_1, parcial_2, recu_1, recu_2, estado));
     }
@@ -121,7 +122,7 @@ public class Main {
             System.out.println("El DNI ingresado es incorrecto, intentelo nuevamente.");
         }
         }
-        while (ID != -1);
+        while (ID == -1);
         
         System.out.println("Ingrese la nota del primer parcial: ");
         parcial_1 = entrada.nextInt();
@@ -151,38 +152,54 @@ public class Main {
         }
     }
     
-    private static void estado ()
+    private static void estado (ArrayList <Estudiante> estudiantes)
     {
+        int parcial_1, parcial_2;
+         
+        for (int i = 0; i < estudiantes.size(); i++) {
+          parcial_1 = estudiantes.get(i).getparcial1(); 
+          parcial_2 = estudiantes.get(i).getparcial2();
+          if (parcial_1 >= 8 && parcial_2 >= 8)
+          {
+            estudiantes.get(i).setestado("promocional");
+          }else if (parcial_1 >= 6 && parcial_2 >= 6)
+          {
+            estudiantes.get(i).setestado("regular");
+          }else 
+          {
+            estudiantes.get(i).setestado("reprobado");
+          }
+        }
         
     }
     
     private static void mostrar_estudiantes (ArrayList <Estudiante> estudiantes)
     {
-        // Metodo de entrada
-        Scanner entrada = new Scanner (System.in);
-        int DNI, ID, recu_1, recu_2;
-        
-        System.out.println("Ingrese el DNI del alumno: ");
-        DNI = entrada.nextInt();
-        ID = buscar_persona(estudiantes,DNI);
-        
-        /*Se imprimen datos y notas del estudiante*/
-        System.out.println("DNI: " + estudiantes.get(ID).getdni());
-        System.out.println("Nombre: " + estudiantes.get(ID).getnombre());
-        System.out.println("Apellido: " + estudiantes.get(ID).getapellido());
-        System.out.println("Nota 1er Parcial : " + estudiantes.get(ID).getparcial1());
-        System.out.println("Nota 2do Parcial : " + estudiantes.get(ID).getparcial2());
+        int recu_1, recu_2;
+       
+        for (int i = 0; i < estudiantes.size(); i++) {
+           /*Se imprimen datos y notas del estudiante*/
+        System.out.println("\n\n**ALUMNO**");
+        System.out.println("DNI: " + estudiantes.get(i).getdni());
+        System.out.println("Nombre: " + estudiantes.get(i).getnombre());
+        System.out.println("Apellido: " + estudiantes.get(i).getapellido());
+        System.out.println("DNI: " + estudiantes.get(i).getestado());
+        System.out.println("Nota 1er Parcial : " + estudiantes.get(i).getparcial1());
+        System.out.println("Nota 2do Parcial : " + estudiantes.get(i).getparcial2());
        
         /*Se imprimen las notas de los recuperatorios solo si el estudiante los realizo*/
-        recu_1 = estudiantes.get(ID).getparcial1();
+        recu_1 = estudiantes.get(i).getparcial1();
         if (recu_1 < 6)
         { 
-        System.out.println("Nota Recuperatorio 1er Parcial: " + estudiantes.get(ID).getrecuperatorio1());
+        System.out.println("Nota Recuperatorio 1er Parcial: " + estudiantes.get(i).getrecuperatorio1());
         }
-        recu_2 = estudiantes.get(ID).getparcial2();
+        recu_2 = estudiantes.get(i).getparcial2();
         if (recu_2 < 6)
         {
-        System.out.println("Nota Recuperatorio 2do Parcial: " + estudiantes.get(ID).getrecuperatorio2());
+        System.out.println("Nota Recuperatorio 2do Parcial: " + estudiantes.get(i).getrecuperatorio2());
+        } 
         }
+        
+        
     }   
 }
