@@ -85,17 +85,25 @@ class Estudiante  //Bajo objetos basados en esta clase vamos a almacenar a los e
 
 public class Punto_49
 {
-    private static int buscar_persona (ArrayList <Estudiante> estudiantes, int DNI)  //Recibe la lista de estudiantes y un dni para buscar, devuelve el ID de lista del estudiante
+    private static int buscar_persona (ArrayList <Estudiante> estudiantes, int DNI)  //Recibe la lista de estudiantes y un dni para buscar, devuelve el ID de lista del estudiante, en caso de que no exista devuelve -1
     {
-        int ID = 1;
+        // Variable local
+        int ID = -1;
         
-        
+        for (int i = 0; i < estudiantes.size(); i++)  // Busqueda lineal
+        {
+            if (estudiantes.get(i).getdni() == DNI)
+            {
+                ID = i;
+                break;
+            }
+        }
         
         return ID;
         
     }
     
-    private static void mostrar_estudiantes (ArrayList <Estudiante> estudiantes)
+    private static void mostrar_estudiantes (ArrayList <Estudiante> estudiantes)  //  Actualmente para testing
     {
         // Metodo de entrada
         Scanner entrada = new Scanner (System.in);
@@ -118,11 +126,59 @@ public class Punto_49
         
     }
     
-    private static void asignar_notas ()
+    private static void asignar_notas (ArrayList <Estudiante> estudiantes)  // Derivacion del main se encarga de tomar las notas del usuario y cargarlas en la base de datos
     {
         // Metodo de entrada
         Scanner entrada = new Scanner (System.in);
+        // Variables locales
+        int ID, DNI, parcial_1, parcial_2, recu_1, recu_2;
         
+        do
+        {
+            System.out.println("Ingrese el DNI del Estudiante: ");
+            
+            try
+            {
+                DNI = entrada.nextInt();
+            }
+            catch (InputMismatchException ime)
+            {
+                entrada.next();
+                DNI = -1;
+            }
+            
+            if (DNI == -1)
+            {
+                ID = -1;
+                System.out.println("El DNI tiene un formato invalido");
+            }
+            else
+            {
+                ID = buscar_persona (estudiantes, DNI);
+            }
+            
+            if (ID == -1)
+            {
+                System.out.println("El DNI no pertenece a ningun estudiante cargado");
+            }
+            
+        } while (DNI == -1 || ID == -1);
+        
+        System.out.println("Estudiante:");
+        System.out.println("Nombre: " + estudiantes.get(ID).getnombre());
+        System.out.println("Apellido: " + estudiantes.get(ID).getapellido());
+        System.out.println("DNI: " + estudiantes.get(ID).getdni());
+        
+        do
+        {
+            System.out.println("Ingrese la nota del primer parcial: ");
+            
+            try
+            {
+                parcial_1 = entrada.nextInt();
+            }
+            
+        } while ();
         
     }
     
