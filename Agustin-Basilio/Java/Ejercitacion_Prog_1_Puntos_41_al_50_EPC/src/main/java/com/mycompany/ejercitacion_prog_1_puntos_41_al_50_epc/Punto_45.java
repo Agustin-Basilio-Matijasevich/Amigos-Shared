@@ -2,10 +2,6 @@ package com.mycompany.ejercitacion_prog_1_puntos_41_al_50_epc;
 
 import java.util.Scanner;
 
-/**
- *
- * @author agust
- */
 public class Punto_45
 {
     public static void main(String[] args)

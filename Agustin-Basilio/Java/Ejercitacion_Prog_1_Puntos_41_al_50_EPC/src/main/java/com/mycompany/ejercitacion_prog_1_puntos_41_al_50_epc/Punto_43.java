@@ -1,9 +1,5 @@
 package com.mycompany.ejercitacion_prog_1_puntos_41_al_50_epc;
 
-/**
- *
- * @author agust
- */
 public class Punto_43
 {
     public static void ordenar_padron (int dni[], String nombres [], String apellidos[], int telefonos[])
